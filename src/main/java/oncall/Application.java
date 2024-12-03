@@ -1,13 +1,12 @@
 package oncall;
 
+import oncall.config.AppConfig;
+import oncall.controller.OnCallController;
+
 public class Application {
     public static void main(String[] args) {
-        // TODO: 프로그램 구현
+        AppConfig appConfig = new AppConfig();
+        OnCallController onCallController = appConfig.onCallController();
+        onCallController.run();
     }
-}
-
-public record class mainDto {
-    private int id;
-    private String name;
-    private int age;
 }
